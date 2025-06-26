@@ -1,3 +1,5 @@
+import React from 'react';
+
 const SlideAdvancedGitGitHubActionsWorkshop = () => (
     <section>
         <h1>Advanced Git &amp; GitHub Actions Workshop</h1>
@@ -27,7 +29,7 @@ const SlideWhatIsGitQuickReview = () => (
             </div>
             <br />
             <div>
-                <strong>History:</strong> Developed for Linux kernel development after BitKeeper's license was revoked.
+                <strong>History:</strong> Developed for Linux kernel development after BitKeeper&apos;s license was revoked.
             </div>
             <div>
                 Now the de facto standard for open source and enterprise projects.
@@ -232,7 +234,7 @@ const SlideResolvingConflicts = () => (
             <div>git mergetool</div>
             <div>git rerere</div>
             <br />
-            <div>Stands for "reuse recorded resolution."</div>
+            <div>Stands for &quot;reuse recorded resolution.&quot;</div>
         </div>
     </section>
 );
@@ -405,7 +407,7 @@ const SlideWorkflowUseCaseDeployToProduction = () => (
         <div style={{ marginTop: "1em", fontWeight: "bold", color: "#2980b9" }}>
             TRY IT!<br />
             Add a new step to your workflow:<br />
-            <code>run: echo "Hello from Actions"</code><br />
+            <code>run: echo &quot;Hello from Actions&quot;</code><br />
             Commit and push your change to trigger the workflow and see the output in the Actions tab.
         </div>
     </section>
