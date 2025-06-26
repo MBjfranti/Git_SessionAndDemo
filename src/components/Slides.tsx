@@ -17,6 +17,46 @@ const Slide2 = () => (
     </section>
 );
 
+const SlideGitReview = () => (
+    <section>
+        <h2>What is Git? Quick Review</h2>
+        <div>
+            <div>
+                <strong>Git</strong> is a distributed version control system created by Linus Torvalds in 2005.
+            </div>
+            <div>
+                It tracks changes in source code, enabling collaboration, branching, and history.
+            </div>
+            <br />
+            <div>
+                <strong>History:</strong> Developed for Linux kernel development after BitKeeper's license was revoked.
+            </div>
+            <div>
+                Now the de facto standard for open source and enterprise projects.
+            </div>
+        </div>
+    </section>
+);
+
+const SlideGitConcepts = () => (
+    <section>
+        <h2>Git Concepts: Working, Staging, Local &amp; Remote</h2>
+        <img
+            src="https://i.ytimg.com/vi/e9lnsKot_SQ/maxresdefault.jpg"
+            alt="Git Working Directory, Staging Area, Local and Remote Repo"
+            style={{ maxWidth: "100%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }}
+        />
+        <div style={{ marginTop: "1em" }}>
+            <ul style={{ textAlign: "left" }}>
+                <li><strong>Working Directory:</strong> Your local files and edits</li>
+                <li><strong>Staging Area (Index):</strong> Where you prepare changes for commit (<code>git add</code>)</li>
+                <li><strong>Local Repository:</strong> Commits saved on your machine (<code>git commit</code>)</li>
+                <li><strong>Remote Repository:</strong> Shared server (e.g., GitHub) (<code>git push</code>/<code>git pull</code>)</li>
+            </ul>
+        </div>
+    </section>
+);
+
 const Slide3 = () => (
     <section>
         <h2>Why Branch?</h2>
@@ -54,6 +94,20 @@ const Slide4 = () => (
                     <div>Short branches or direct to <code>main</code></div>
                 </div>
             </div>
+        </div>
+    </section>
+);
+
+const Slide4_1 = () => (
+    <section>
+        <h2>Branching Visualized</h2>
+        <img
+            src="https://user-images.githubusercontent.com/1256329/80170009-f9d03200-85b4-11ea-94d3-3041887565ac.png"
+            alt="Git Branching Diagram"
+            style={{ maxWidth: "100%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }}
+        />
+        <div style={{ marginTop: "1em", color: "#555" }}>
+            Visual representation of branching, merging, and history in Git.
         </div>
     </section>
 );
@@ -405,8 +459,11 @@ const Slide24 = () => (
 export const slides = [
     Slide1,
     Slide2,
+    SlideGitReview,
+    SlideGitConcepts,
     Slide3,
     Slide4,
+    Slide4_1,
     Slide5,
     Slide6,
     Slide7,
