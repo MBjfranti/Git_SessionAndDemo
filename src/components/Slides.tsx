@@ -232,6 +232,20 @@ const SlideResolvingConflicts = () => (
     </section>
 );
 
+const SlideConflictVizualized = () => (
+    <section>
+        <h2>Conflict Visualized</h2>
+        <img
+            src="https://jonathanmh.com/assets/2015/temporary-git-merge-conflict-files.png"
+            alt="Git Merge Conflict Visualization"
+            style={{ maxWidth: "100%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }}
+        />
+        <div style={{ marginTop: "1em", color: "#555" }}>
+            Visual example of a merge conflict in Git—when two branches change the same part of a file.
+        </div>
+    </section>
+);
+
 const SlidePullRequests = () => (
     <section>
         <h2>Pull Requests</h2>
@@ -294,6 +308,20 @@ npm run lint`}
             <span style={{ color: "#2980b9" }}>
                 Tip: Break a test or linter rule and see how the hook blocks your commit!
             </span>
+        </div>
+    </section>
+);
+
+const SlideGitHooksVisualized = () => (
+    <section>
+        <h2>Git Hooks Visualized</h2>
+        <img
+            src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/02/git-hooks.webp"
+            alt="Git Hooks Diagram"
+            style={{ maxWidth: "100%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }}
+        />
+        <div style={{ marginTop: "1em" }}>
+            <strong>Use Case:</strong> Automatically run tests before every push to prevent broken code from reaching the repository.
         </div>
     </section>
 );
@@ -472,9 +500,11 @@ export const slides = [
     SlideMergeStrategies,
     SlideOursTheirsStrategies,
     SlideResolvingConflicts,
+    SlideConflictVizualized,
     SlidePullRequests,
     SlidePullRequestBestPractices,
     SlideGitHooksAutomation,
+    SlideGitHooksVisualized,
     SlideWhatAreActions,
     SlideWorkflowAnatomy,
     SlideHelloWorldWorkflow,
