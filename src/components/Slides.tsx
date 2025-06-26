@@ -1,12 +1,10 @@
-import React from "react";
-
-const Slide1 = () => (
+const SlideAdvancedGitGitHubActionsWorkshop = () => (
     <section>
         <h1>Advanced Git &amp; GitHub Actions Workshop</h1>
     </section>
 );
 
-const Slide2 = () => (
+const SlideGoals = () => (
     <section>
         <h2>Goals</h2>
         <div>
@@ -17,7 +15,7 @@ const Slide2 = () => (
     </section>
 );
 
-const SlideGitReview = () => (
+const SlideWhatIsGitQuickReview = () => (
     <section>
         <h2>What is Git? Quick Review</h2>
         <div>
@@ -38,7 +36,7 @@ const SlideGitReview = () => (
     </section>
 );
 
-const SlideGitConcepts = () => (
+const SlideGitConceptsWorkingStagingLocalRemote = () => (
     <section>
         <h2>Git Concepts: Working, Staging, Local &amp; Remote</h2>
         <img
@@ -57,7 +55,7 @@ const SlideGitConcepts = () => (
     </section>
 );
 
-const Slide3 = () => (
+const SlideWhyBranch = () => (
     <section>
         <h2>Why Branch?</h2>
         <div>
@@ -69,7 +67,7 @@ const Slide3 = () => (
     </section>
 );
 
-const Slide4 = () => (
+const SlideBranchingModels = () => (
     <section>
         <h2>Branching Models</h2>
         <div>
@@ -98,7 +96,7 @@ const Slide4 = () => (
     </section>
 );
 
-const Slide4_1 = () => (
+const SlideBranchingVisualized = () => (
     <section>
         <h2>Branching Visualized</h2>
         <img
@@ -112,7 +110,7 @@ const Slide4_1 = () => (
     </section>
 );
 
-const Slide5 = () => (
+const SlideNamingConventions = () => (
     <section>
         <h2>Naming Conventions</h2>
         <div>
@@ -132,7 +130,7 @@ const Slide5 = () => (
     </section>
 );
 
-const Slide6 = () => (
+const SlideMergeBasics = () => (
     <section>
         <h2>Merge Basics</h2>
         <code>git merge &lt;branch&gt;</code>
@@ -140,7 +138,7 @@ const Slide6 = () => (
     </section>
 );
 
-const Slide7 = () => (
+const SlideRebaseBasics = () => (
     <section>
         <h2>Rebase Basics</h2>
         <code>git rebase master</code>
@@ -153,7 +151,7 @@ const Slide7 = () => (
     </section>
 );
 
-const Slide8 = () => (
+const SlideWhenToUseWhich = () => (
     <section>
         <h2>When to Use Which</h2>
         <div>
@@ -161,13 +159,20 @@ const Slide8 = () => (
             <div>Preserving context</div>
         </div>
         <br />
+        <div style={{ margin: "1em 0" }}>
+            <img
+                src="https://i.ytimg.com/vi/0chZFIZLR_0/maxresdefault.jpg"
+                alt="Merge vs Rebase Diagram"
+                style={{ maxWidth: "65%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }}
+            />
+        </div>
         <div style={{ marginTop: "1em" }}>
             <strong>Example:</strong><br /> Use <code>merge</code> for preserving all context in team projects;<br /> use <code>rebase</code> for a clean, linear history before merging a feature branch.
         </div>
     </section>
 );
 
-const Slide9 = () => (
+const SlideInteractiveRebase = () => (
     <section>
         <h2>Interactive Rebase</h2>
         <div>
@@ -198,7 +203,7 @@ const Slide9 = () => (
     </section>
 );
 
-const Slide10 = () => (
+const SlideMergeStrategies = () => (
     <section>
         <h2>Merge Strategies</h2>
         <div>
@@ -213,13 +218,13 @@ const Slide10 = () => (
     </section>
 );
 
-const Slide11 = () => (
+const SlideOursTheirsStrategies = () => (
     <section>
         <h2>The “Ours” and “Theirs” Strategies</h2>
     </section>
 );
 
-const Slide12 = () => (
+const SlideResolvingConflicts = () => (
     <section>
         <h2>Resolving Conflicts</h2>
         <div>
@@ -232,7 +237,21 @@ const Slide12 = () => (
     </section>
 );
 
-const Slide13 = () => (
+const SlideConflictVizualized = () => (
+    <section>
+        <h2>Conflict Visualized</h2>
+        <img
+            src="https://jonathanmh.com/assets/2015/temporary-git-merge-conflict-files.png"
+            alt="Git Merge Conflict Visualization"
+            style={{ maxWidth: "100%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }}
+        />
+        <div style={{ marginTop: "1em", color: "#555" }}>
+            Visual example of a merge conflict in Git—when two branches change the same part of a file.
+        </div>
+    </section>
+);
+
+const SlidePullRequests = () => (
     <section>
         <h2>Pull Requests</h2>
         <div>
@@ -250,7 +269,7 @@ const Slide13 = () => (
     </section>
 );
 
-const Slide14 = () => (
+const SlidePullRequestBestPractices = () => (
     <section>
         <h2>Pull Request Best Practices</h2>
         <div>
@@ -272,7 +291,7 @@ const Slide14 = () => (
     </section>
 );
 
-const Slide15 = () => (
+const SlideGitHooksAutomation = () => (
     <section>
         <h2>Git Hooks &amp; Automation</h2>
         <div style={{ background: "#222", color: "#fff", padding: "1em", borderRadius: "6px", fontSize: "0.95em" }}>
@@ -298,7 +317,21 @@ npm run lint`}
     </section>
 );
 
-const Slide16 = () => (
+const SlideGitHooksVisualized = () => (
+    <section>
+        <h2>Git Hooks Visualized</h2>
+        <img
+            src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/02/git-hooks.webp"
+            alt="Git Hooks Diagram"
+            style={{ maxWidth: "100%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }}
+        />
+        <div style={{ marginTop: "1em" }}>
+            <strong>Use Case:</strong> Automatically run tests before every push to prevent broken code from reaching the repository.
+        </div>
+    </section>
+);
+
+const SlideWhatAreActions = () => (
     <section>
         <h2>What Are Actions?</h2>
         <p>YAML-based workflows triggered by events</p>
@@ -315,7 +348,7 @@ const Slide16 = () => (
     </section>
 );
 
-const Slide17 = () => (
+const SlideWorkflowAnatomy = () => (
     <section>
         <h2>Workflow Anatomy</h2>
         <div>
@@ -328,7 +361,7 @@ const Slide17 = () => (
     </section>
 );
 
-const Slide18 = () => (
+const SlideHelloWorldWorkflow = () => (
     <section>
         <h2>Hello-World Workflow</h2>
         <pre style={{ textAlign: "left", background: "#222", color: "#fff", padding: "1em", borderRadius: "6px" }}>
@@ -356,7 +389,7 @@ const Slide18 = () => (
     </section>
 );
 
-const Slide19 = () => (
+const SlideWorkflowUseCaseDeployToProduction = () => (
     <section>
         <h2>Workflow Use Case: Deploy to Production</h2>
         <div>
@@ -385,7 +418,7 @@ const Slide19 = () => (
  * @remarks
  * CI/CD stands for Continuous Integration and Continuous Deployment/Delivery,
  */
-const Slide20 = () => (
+const SlideCommonUseCases = () => (
     <section>
         <h2>Common Use Cases</h2>
         <div>
@@ -402,7 +435,7 @@ const Slide20 = () => (
     </section>
 );
 
-const Slide21 = () => (
+const SlidePossibleMarketBeatActions = () => (
     <section>
         <h2>Possible MarketBeat Actions</h2>
         <div style={{ textAlign: "left" }}>
@@ -416,7 +449,7 @@ const Slide21 = () => (
     </section>
 );
 
-const Slide22 = () => (
+const SlideQuestions = () => (
     <section>
         <h2>Questions?</h2>
         <div>
@@ -425,7 +458,7 @@ const Slide22 = () => (
     </section>
 );
 
-const Slide23 = () => (
+const SlideKeyTakeawaysForYourWork = () => (
     <section>
         <h2>Key Takeaways for Your Work</h2>
         <div>
@@ -438,7 +471,7 @@ const Slide23 = () => (
     </section>
 );
 
-const Slide24 = () => (
+const SlideThanks = () => (
     <section>
         <h2>Thanks!</h2>
         <div>
@@ -457,31 +490,33 @@ const Slide24 = () => (
 );
 
 export const slides = [
-    Slide1,
-    Slide2,
-    SlideGitReview,
-    SlideGitConcepts,
-    Slide3,
-    Slide4,
-    Slide4_1,
-    Slide5,
-    Slide6,
-    Slide7,
-    Slide8,
-    Slide9,
-    Slide10,
-    Slide11,
-    Slide12,
-    Slide13,
-    Slide14,
-    Slide15,
-    Slide16,
-    Slide17,
-    Slide18,
-    Slide19,
-    Slide20,
-    Slide21,
-    Slide22,
-    Slide23,
-    Slide24,
+    SlideAdvancedGitGitHubActionsWorkshop,
+    SlideGoals,
+    SlideWhatIsGitQuickReview,
+    SlideGitConceptsWorkingStagingLocalRemote,
+    SlideWhyBranch,
+    SlideBranchingModels,
+    SlideBranchingVisualized,
+    SlideNamingConventions,
+    SlideMergeBasics,
+    SlideRebaseBasics,
+    SlideWhenToUseWhich,
+    SlideInteractiveRebase,
+    SlideMergeStrategies,
+    SlideOursTheirsStrategies,
+    SlideResolvingConflicts,
+    SlideConflictVizualized,
+    SlidePullRequests,
+    SlidePullRequestBestPractices,
+    SlideGitHooksAutomation,
+    SlideGitHooksVisualized,
+    SlideWhatAreActions,
+    SlideWorkflowAnatomy,
+    SlideHelloWorldWorkflow,
+    SlideWorkflowUseCaseDeployToProduction,
+    SlideCommonUseCases,
+    SlidePossibleMarketBeatActions,
+    SlideQuestions,
+    SlideKeyTakeawaysForYourWork,
+    SlideThanks,
 ];
