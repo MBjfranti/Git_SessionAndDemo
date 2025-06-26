@@ -11,6 +11,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div>
+          Yo!
+        </div>
         <SlideProjector children={[
           <div>
             <img
