@@ -13,7 +13,6 @@ function App() {
       <header className="App-header">
         <SlideProjector children={[
           <div>
-
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
               alt="Git logo"
@@ -21,6 +20,7 @@ function App() {
               height={64}
               className="git-logo"
             />
+
             <h1 className="main-title">{agendaTitle}</h1>
             <h3 className="main-title">{agendaSubtitle}</h3>
 

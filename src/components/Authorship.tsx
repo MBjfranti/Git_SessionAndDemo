@@ -1,7 +1,7 @@
 import React from "react";
 
 const Authorship: React.FC = () => (
-    <p className="authorship">
+    <p className="authorship" style={{ fontSize: "0.9em" }}>
         Created by{" "}
         <a
             href="https://github.com/MBjfranti"
@@ -11,6 +11,7 @@ const Authorship: React.FC = () => (
         >
             John Franti
         </a>
+        &nbsp;|&nbsp;6/25/2025&nbsp;|&nbsp;Built in React
     </p>
 );
 

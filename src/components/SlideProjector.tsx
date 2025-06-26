@@ -13,6 +13,15 @@ const SlideProjector: React.FC<SlideProjectorProps> = ({ children }) => {
 
     return (
         <div>
+            {current !== 0 && (
+                <div style={{ position: 'absolute', top: '1rem', left: '1rem' }}>
+                    <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                        alt="Git Logo"
+                        style={{ width: 64, height: 64 }}
+                    />
+                </div>
+            )}
             <div>{React.Children.toArray(children)[current]}</div>
             <div
                 style={{
