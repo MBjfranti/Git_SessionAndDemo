@@ -66,7 +66,15 @@ const Slide5 = () => (
             <div><strong>bugfix/</strong> – for bug fixes (e.g., <code>bugfix/navbar-crash</code>)</div>
             <div><strong>hotfix/</strong> – for urgent production fixes (e.g., <code>hotfix/payment-error</code>)</div>
             <div><strong>release/</strong> – for release preparation (e.g., <code>release/v1.2.0</code>)</div>
+
+            <br />
+            <div style={{ marginTop: "1em", fontWeight: "bold", color: "#c0392b" }}>
+                EXERCISE!<br />
+                Come up with a branch name for a code change on this repo - it can be anything.<br />
+                Then, make a small change in the codebase on that branch (e.g., add a comment or a placeholder component).
+            </div>
         </div>
+
     </section>
 );
 
@@ -121,6 +129,17 @@ const Slide9 = () => (
                     <code>pick, squash, edit, drop</code>
                 </div>
             </div>
+            <br />
+            <div style={{ marginTop: "1em", fontWeight: "bold", color: "#2980b9" }}>
+                INTERACTIVE REBASE EXERCISE!<br />
+                Try running <code>git rebase -i HEAD~3</code> in your terminal.<br />
+                In the editor that opens, experiment with <code>pick</code>, <code>squash</code>, <code>edit</code>, and <code>drop</code>.<br />
+                <br />
+                <span style={{ color: "#c0392b" }}>
+                    What happens if you squash two commits? What if you drop one?<br />
+                    Try it out and see how your commit history changes!
+                </span>
+            </div>
         </div>
     </section>
 );
@@ -167,11 +186,7 @@ const Slide13 = () => (
             <div>Assigning reviewers</div>
             <div>Linking issues</div>
         </div>
-    </section>
-);
-
-const Slide14 = () => (
-    <section>
+        <br />
         <h2>Code Reviews</h2>
         <div>
             <div>Comments</div>
@@ -181,24 +196,50 @@ const Slide14 = () => (
     </section>
 );
 
+const Slide14 = () => (
+    <section>
+        <h2>Pull Request Best Practices</h2>
+        <div>
+            <div>Keep PRs small and focused</div>
+            <div>Write clear titles and descriptions</div>
+            <div>Link related issues or tasks</div>
+            <div>Request specific feedback from reviewers</div>
+        </div>
+        <br />
+        <div style={{ marginTop: "1em", fontWeight: "bold", color: "#c0392b" }}>
+            EXERCISE!<br />
+            Open a pull request for the branch you created earlier.<br />
+            Add a description, link any related issues (fake), and request a review from a teammate.<br />
+            <br />
+            <span style={{ color: "#2980b9" }}>
+                Bonus: Try adding comments to your own PR or asking for feedback on specific lines of code!
+            </span>
+        </div>
+    </section>
+);
+
 const Slide15 = () => (
     <section>
         <h2>Git Hooks &amp; Automation</h2>
-        <div>
-            <div>pre-commit</div>
-            <div>pre-push</div>
-            <div>linting</div>
-            <div>tests</div>
+        <div style={{ background: "#222", color: "#fff", padding: "1em", borderRadius: "6px", fontSize: "0.95em" }}>
+            <strong>What’s a Git hook?</strong> <br />
+            Small scripts that run automatically at certain Git events (like before commit or push).
+            <br /><br />
+            <strong>Example: pre-commit</strong>
+            <pre style={{ background: "#111", color: "#fff", margin: "0.5em 0", padding: "0.5em", borderRadius: "4px" }}>
+                {`# .husky/pre-commit
+npm run lint`}
+            </pre>
+            This runs <code>npm run lint</code> before every commit to catch errors early.
         </div>
-        <br/>
-        <div>
-            <strong>Tools:</strong>
-            <div>Husky (manage Git hooks)</div>
-            <div>lint-staged (run linters on staged files)</div>
-            <div>Commitizen (standardize commit messages)</div>
-            <div>prettier (code formatting)</div>
-            <div>eslint (linting)</div>
-            <div>Jest (testing)</div>
+        <br />
+        <div style={{ marginTop: "1em", fontWeight: "bold", color: "#27ae60" }}>
+            TRY IT!<br />
+            Set up a <code>pre-commit</code> or <code>pre-push</code> hook to run <code>npm test</code> or <code>eslint</code> before you commit or push.
+            <br /><br />
+            <span style={{ color: "#2980b9" }}>
+                Tip: Break a test or linter rule and see how the hook blocks your commit!
+            </span>
         </div>
     </section>
 );
@@ -236,22 +277,26 @@ const Slide17 = () => (
 const Slide18 = () => (
     <section>
         <h2>Hello-World Workflow</h2>
-        <pre style={{ textAlign: "left" }}>
+        <pre style={{ textAlign: "left", background: "#222", color: "#fff", padding: "1em", borderRadius: "6px" }}>
             <code style={{ textAlign: "left", display: "block" }}>
-    {
-`name: CI
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
-jobs:
-    build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - run: npm ci && npm test`
-          }
+                {
+                    `name: CI
+
+    on:
+      workflow_dispatch: // Allows manual triggering
+      push: // Trigger on push events
+        branches: [master]
+      pull_request: // Trigger on pull requests
+        branches: [master]
+        
+    jobs:
+        build:
+        runs-on: ubuntu-latest // Use the latest Ubuntu runner
+        steps:
+        - uses: actions/checkout@v3 // Check out the code from the repository
+        - run: npm ci && npm test // Install dependencies and run tests
+        `
+                }
             </code>
         </pre>
     </section>
@@ -269,9 +314,23 @@ const Slide19 = () => (
         <div>
             <strong>Cool fact:</strong> You can run workflows on your pull requests without needing to merge them!
         </div>
+        <br />
+        <div style={{ marginTop: "1em", fontWeight: "bold", color: "#2980b9" }}>
+            TRY IT!<br />
+            Add a new step to your workflow:<br />
+            <code>run: echo "Hello from Actions"</code><br />
+            Commit and push your change to trigger the workflow and see the output in the Actions tab.
+        </div>
     </section>
 );
 
+/**
+ * Renders a slide section highlighting common use cases such as CI/CD pipelines,
+ * linting, security scans, and release publication.
+ *
+ * @remarks
+ * CI/CD stands for Continuous Integration and Continuous Deployment/Delivery,
+ */
 const Slide20 = () => (
     <section>
         <h2>Common Use Cases</h2>
@@ -281,6 +340,11 @@ const Slide20 = () => (
             <div>Security scans</div>
             <div>Release publication</div>
         </div>
+        <br />
+        <br />
+        <small style={{ color: "#888" }}>
+            CI/CD stands for Continuous Integration and Continuous Deployment/Delivery,<br /> which are practices that automate the building, testing, and deployment of applications.
+        </small>
     </section>
 );
 
