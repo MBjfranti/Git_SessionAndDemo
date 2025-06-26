@@ -1,4 +1,5 @@
 import AgendaListItem from './AgendaListItem';
+import React from 'react';
 
 type AgendaItem = {
     time: string;

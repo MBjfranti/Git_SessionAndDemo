@@ -1,3 +1,5 @@
+import React from 'react';
+
 const SlideAdvancedGitGitHubActionsWorkshop = () => (
     <section>
         <h1>Advanced Git &amp; GitHub Actions Workshop</h1>
