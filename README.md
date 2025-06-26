@@ -29,6 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 - `npm start` — Start the development server
 - `npm test` — Run tests in watch mode
+- `npm run lint` — Run linting checks across the repo
 - `npm run build` — Build the app for production
 
 ## Project Structure
