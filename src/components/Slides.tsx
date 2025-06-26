@@ -1,5 +1,3 @@
-import React from "react";
-
 const SlideAdvancedGitGitHubActionsWorkshop = () => (
     <section>
         <h1>Advanced Git &amp; GitHub Actions Workshop</h1>
@@ -161,6 +159,13 @@ const SlideWhenToUseWhich = () => (
             <div>Preserving context</div>
         </div>
         <br />
+        <div style={{ margin: "1em 0" }}>
+            <img
+                src="https://i.ytimg.com/vi/0chZFIZLR_0/maxresdefault.jpg"
+                alt="Merge vs Rebase Diagram"
+                style={{ maxWidth: "65%", height: "auto", border: "1px solid #ccc", borderRadius: "8px" }}
+            />
+        </div>
         <div style={{ marginTop: "1em" }}>
             <strong>Example:</strong><br /> Use <code>merge</code> for preserving all context in team projects;<br /> use <code>rebase</code> for a clean, linear history before merging a feature branch.
         </div>
