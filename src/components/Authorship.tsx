@@ -1,7 +1,14 @@
 import React from "react";
 
 const Authorship: React.FC = () => (
-    <p className="authorship" style={{ fontSize: "0.9em" }}>
+    <p
+        className="authorship"
+        style={{
+            fontSize: "0.8em",
+            marginBottom: "1.5em",
+            opacity: 0.5
+        }}
+    >
         Created by{" "}
         <a
             href="https://github.com/MBjfranti"

@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from 'react';
+import React, { useState, ReactNode, useEffect, useCallback } from 'react';
 
 interface SlideProjectorProps {
     children: ReactNode[];
@@ -8,8 +8,20 @@ const SlideProjector: React.FC<SlideProjectorProps> = ({ children }) => {
     const [current, setCurrent] = useState(0);
     const total = React.Children.count(children);
 
-    const goBack = () => setCurrent((prev) => (prev > 0 ? prev - 1 : prev));
-    const goForward = () => setCurrent((prev) => (prev < total - 1 ? prev + 1 : prev));
+    const goBack = useCallback(() => setCurrent((prev) => (prev > 0 ? prev - 1 : prev)), []);
+    const goForward = useCallback(() => setCurrent((prev) => (prev < total - 1 ? prev + 1 : prev)), [total]);
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'ArrowLeft') {
+                goBack();
+            } else if (e.key === 'ArrowRight') {
+                goForward();
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [goBack, goForward]);
 
     return (
         <div>
